@@ -99,8 +99,8 @@ load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
 
 git_repository(
     name = "build_bazel_rules_nodejs",
-    commit = "70406e05de721520ca568a17186de73e972d7651",
-    remote = "https://github.com/bazelbuild/rules_nodejs.git",
+    commit = "548751e641b8c27e1160d4bd639dc716236ed226",
+    remote = "https://github.com/alexandruavadanii/rules_nodejs.git",
     shallow_since = "1551145517 -0800",
 )
 

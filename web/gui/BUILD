@@ -107,6 +107,7 @@ genrule(
           " export HOME=. &&" +
           " export XDG_CONFIG_HOME=$(@D)/config &&" +  # npm config cache to the sandbos
           " export BABEL_DISABLE_CACHE=1 &&" +  # turn off babel cache
+          " export QT_QPA_PLATFORM=offscreen &&" +
           ' if [[ ! -z $${HTTP_PROXY-} ]]; then NPM_ARGS="--proxy $$HTTP_PROXY --without-ssl --insecure"; else NPM_ARGS=""; fi &&' +
           " NPM=$$ROOT/$(location @nodejs//:bin/npm) &&" +
           " mkdir -p tools/gui &&" +
