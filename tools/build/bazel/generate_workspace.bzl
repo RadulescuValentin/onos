@@ -808,12 +808,6 @@ def generated_maven_jars():
             jar_sha256 = "809ff79aeaefe0ffd0c0c72d7996ca6b99bf3b873faaa76f65a3cfbae3f66842",
             licenses = ["notice"],
             jar_urls = ["https://repo1.maven.org/maven2/io/netty/netty-codec-socks/4.1.35.Final/netty-codec-socks-4.1.35.Final.jar"],        )
-    if "io_netty_netty_tcnative_boringssl" not in native.existing_rules():
-        java_import_external(
-            name = "io_netty_netty_tcnative_boringssl",
-            jar_sha256 = "65868eeb16087bdc24b0764d68d12e728b67dca03ec080570e79bdd8525b9290",
-            licenses = ["notice"],
-            jar_urls = ["https://github.com/RadulescuValentin/boringssl-static/raw/master/io/netty/netty-tcnative-boringssl-static/2.0.29.Final/netty-tcnative-boringssl-static-2.0.29.Final.jar"],        )
     if "objenesis" not in native.existing_rules():
         java_import_external(
             name = "objenesis",
@@ -1330,12 +1324,6 @@ def generated_maven_jars():
             jar_sha256 = "ba491f1dff9b4fb211fe495fe6c52a38f76dcd861dadfcd2c93bea0f9fd18f03",
             licenses = ["notice"],
             jar_urls = ["https://repo1.maven.org/maven2/org/gnu/inet/libidn/1.15/libidn-1.15.jar"],        )
-    if "sigar" not in native.existing_rules():
-        java_import_external(
-            name = "sigar",
-            jar_sha256 = "5107e6b19b1d0ff2cfcd3baf0c25f0d444330273b1f2bec710e127c733f11455",
-            licenses = ["notice"],
-            jar_urls = ["https://repo1.maven.org/maven2/org/knowhowlab/osgi/sigar/1.6.5_01/sigar-1.6.5_01.jar"],        )
 artifact_map = {}
 artifact_map["@aopalliance_repackaged//:aopalliance_repackaged"] = "mvn:org.glassfish.hk2.external:aopalliance-repackaged:jar:2.5.0-b42"
 artifact_map["@amqp_client//:amqp_client"] = "mvn:com.rabbitmq:amqp-client:jar:3.6.1"
@@ -1451,7 +1439,6 @@ artifact_map["@io_netty_netty_resolver//:io_netty_netty_resolver"] = "mvn:io.net
 artifact_map["@io_netty_netty_codec_http2//:io_netty_netty_codec_http2"] = "mvn:io.netty:netty-codec-http2:jar:4.1.35.Final"
 artifact_map["@io_netty_netty_codec_http//:io_netty_netty_codec_http"] = "mvn:io.netty:netty-codec-http:jar:4.1.35.Final"
 artifact_map["@io_netty_netty_codec_socks//:io_netty_netty_codec_socks"] = "mvn:io.netty:netty-codec-socks:jar:4.1.35.Final"
-artifact_map["@io_netty_netty_tcnative_boringssl//:io_netty_netty_tcnative_boringssl"] = "mvn:io.netty:netty-tcnative-boringssl-static:jar:2.0.29.Final"
 artifact_map["@objenesis//:objenesis"] = "mvn:org.objenesis:objenesis:jar:2.6"
 artifact_map["@openflowj//:openflowj"] = "mvn:org.onosproject:openflowj:jar:3.2.1.onos"
 artifact_map["@org_osgi_util_function//:org_osgi_util_function"] = "mvn:org.osgi:org.osgi.util.function:jar:1.1.0"
@@ -1538,7 +1525,6 @@ artifact_map["@aalto_xml//:aalto_xml"] = "mvn:com.fasterxml:aalto-xml:jar:1.0.0"
 artifact_map["@stax2_api//:stax2_api"] = "mvn:org.codehaus.woodstox:stax2-api:jar:4.0.0"
 artifact_map["@concurrent_hashmap//:concurrent_hashmap"] = "mvn:com.googlecode.concurrentlinkedhashmap:concurrentlinkedhashmap-lru:jar:NON-OSGI:1.0"
 artifact_map["@gnu_idn//:gnu_idn"] = "mvn:org.gnu.inet:libidn:jar:NON-OSGI:1.15"
-artifact_map["@sigar//:sigar"] = "mvn:org.knowhowlab.osgi:sigar:jar:1.6.5_01"
 
 def maven_coordinates(label):
     label_string = str(label)
